@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  icon?: string;
+}
+
+const { title, description, href, icon } = Astro.props;
+---
+
+<a href={href} class="block p-8 bg-white rounded-card tablet:rounded-[32px] shadow-[0_8px_24px_rgba(0,0,0,0.05)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition-shadow">
+  {icon && <span class="text-4xl mb-6 block text-brand-gold">{icon}</span>}
+  <h3 class="text-h3 text-brand-heading font-medium mb-3">{title}</h3>
+  <p class="text-brand-body">{description}</p>
+</a>

@@ -1,0 +1,86 @@
+---
+import '@fontsource/be-vietnam-pro/400.css';
+import '@fontsource/be-vietnam-pro/500.css';
+import '@fontsource/be-vietnam-pro/600.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Discover mindfulness practices for a more balanced and peaceful life" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Mindful Living</title>
+  </head>
+  <body class="text-brand-body">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav class="max-w-container mx-auto px-5 h-20 flex items-center justify-between">
+        <a href="/" class="text-2xl text-brand-heading font-medium">Mindful Living</a>
+        <div class="hidden tablet:flex space-x-8">
+          <a href="/exercises" class="text-brand-body hover:text-brand-heading">Exercises</a>
+          <a href="/quotes" class="text-brand-body hover:text-brand-heading">Quotes</a>
+          <a href="/daily-life" class="text-brand-body hover:text-brand-heading">Daily Life</a>
+          <a href="/resources" class="text-brand-body hover:text-brand-heading">Resources</a>
+          <a href="/events" class="text-brand-body hover:text-brand-heading">Events</a>
+        </div>
+        <button class="tablet:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <slot />
+    <footer class="bg-white pt-24 pb-8">
+      <div class="max-w-container mx-auto px-5">
+        <div class="grid grid-cols-1 tablet:grid-cols-3 gap-12 mb-16">
+          <div>
+            <h3 class="text-h3 text-brand-heading font-medium mb-6">Mindful Living</h3>
+            <p class="text-brand-body">Guiding you towards a more mindful and peaceful life.</p>
+          </div>
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-medium text-brand-heading mb-4">Quick Links</h4>
+              <ul class="space-y-3">
+                <li><a href="/exercises" class="hover:text-brand-heading">Mindfulness Exercises</a></li>
+                <li><a href="/quotes" class="hover:text-brand-heading">Inspiration & Quotes</a></li>
+                <li><a href="/daily-life" class="hover:text-brand-heading">Daily Life</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-medium text-brand-heading mb-4">Resources</h4>
+              <ul class="space-y-3">
+                <li><a href="/resources" class="hover:text-brand-heading">Downloads</a></li>
+                <li><a href="/books" class="hover:text-brand-heading">Books</a></li>
+                <li><a href="/podcasts" class="hover:text-brand-heading">Podcasts</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-medium text-brand-heading mb-4">Connect</h4>
+            <ul class="space-y-3">
+              <li><a href="/events" class="hover:text-brand-heading">Events</a></li>
+              <li><a href="/trainers" class="hover:text-brand-heading">Our Trainers</a></li>
+              <li><a href="/contact" class="hover:text-brand-heading">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-small text-center border-t border-gray-100 pt-8">
+          © {new Date().getFullYear()} Mindful Living. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Mindful Living">
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-brand-beige py-section-mobile tablet:py-section">
+      <div class="max-w-container mx-auto px-5">
+        <div class="text-center max-w-4xl mx-auto">
+          <h1 class="text-4xl tablet:text-h1 font-medium text-brand-heading mb-8">
+            Begin Your Mindfulness Journey
+          </h1>
+          <p class="text-xl text-brand-body max-w-2xl mx-auto mb-10">
+            Discover the transformative power of mindfulness through guided exercises, 
+            daily practices, and expert insights.
+          </p>
+          <div class="flex flex-col tablet:flex-row gap-4 justify-center">
+            <Button href="/exercises">Start Your Practice</Button>
+            <Button href="/daily-life" variant="secondary">Learn More</Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-section-mobile tablet:py-section">
+      <div class="max-w-container mx-auto px-5">
+        <h2 class="text-3xl tablet:text-h2 text-brand-heading text-center mb-16">Explore Mindfulness</h2>
+        <div class="grid grid-cols-1 tablet:grid-cols-3 gap-8">
+          <Card
+            title="Mindfulness Exercises"
+            description="Discover guided practices for all experience levels"
+            href="/exercises"
+            icon="🧘‍♀️"
+          />
+          <Card
+            title="Daily Inspiration"
+            description="Find peace through mindful quotes and wisdom"
+            href="/quotes"
+            icon="✨"
+          />
+          <Card
+            title="Resources & Tools"
+            description="Access guides, worksheets, and learning materials"
+            href="/resources"
+            icon="📚"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-brand-dark text-white py-section-mobile tablet:py-section">
+      <div class="max-w-container mx-auto px-5 text-center">
+        <h2 class="text-3xl tablet:text-h2 font-medium mb-8">Ready to Transform Your Life?</h2>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto mb-10">
+          Join our community and discover how mindfulness can bring peace, clarity, 
+          and balance to your daily life.
+        </p>
+        <Button href="/daily-life" class="bg-white text-brand-dark hover:bg-white/90">
+          Get Started Today
+        </Button>
+      </div>
+    </section>
+  </main>
+</Layout>
