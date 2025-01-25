@@ -1,0 +1,104 @@
+# Mindfulness Website Project Guide
+
+## Brand & Design System
+
+### Typography
+- Primary Font: "Be Vietnam Pro"
+- Secondary Font: "Inter" (fallback)
+- Font Sizes:
+  - H1: 72px (mobile: 44px)
+  - H2: 48px (mobile: 32px)
+  - H3: 24px (mobile: 18px)
+  - Body: 18px (mobile: 16px)
+  - Small: 14px
+  - Button: 15px (uppercase)
+
+### Colors
+- Text Colors:
+  - Headings: #323E47 (dark gray/blue)
+  - Body: #62696F
+- Brand Colors:
+  - Primary: #B15535 (terracotta)
+  - Secondary: #CCA778 (gold)
+- Background Colors:
+  - Default: #FFFFFF
+  - Alternate: #FAF6F3 (light beige)
+  - Dark Sections: #323E47
+
+### Layout
+- Container: 1300px max-width
+- Breakpoints:
+  - Desktop: 1200px+
+  - Tablet: 992px
+  - Mobile: 768px and below
+- Section Padding:
+  - Desktop: 148px
+  - Mobile: 70px
+
+### Components
+- Buttons:
+  - Border Radius: 24px
+  - Primary: Terracotta bg (#B15535) with white text
+  - Secondary: White with terracotta border
+- Cards:
+  - Border Radius: 32px (mobile: 18px)
+  - White background with elevation shadow
+- Images:
+  - Border Radius: 42px (large), 32px (small)
+
+## Project Structure
+
+### Core Pages
+- Home (/)
+- Exercises (/exercises)
+  Directory with different exercises and the possibility to have subpages with filtered exercises. Example:
+  - For Children
+  - For Adults
+  - For Stress
+  - ...
+- Quotes (/quotes)
+  Directory with different quotes and the possibility to have subpages with filtered quotes. Example:
+  - Dalai Lama
+  - Daily Life
+  - ...
+- Daily Life (/daily-life)
+  List of advanced articles around the topic. Example:
+  - For Beginners
+  - For Leaders
+  - How to Learn
+- Resources (/resources)
+  A directory with downloadable resources.
+- Events (/events)
+  A directory with events and the possibility to have subpages with filtered events. Example:
+  - Retreats
+  - Workshops
+  - ...
+- People (/people)
+  A directory with people around the topic and the possibility to have subpages with filtered people. Example:
+  - Trainers
+  - Speakers
+  - ...
+
+### Tech Stack
+- Framework: Astro
+- Styling: Tailwind CSS
+- Fonts: @fontsource/be-vietnam-pro, @fontsource/inter
+
+### SEO Requirements
+- Clean URL structure
+- Meta tags for all pages
+- Schema markup implementation
+- Optimized for Core Web Vitals
+
+### Performance Considerations
+- Lazy loading for images
+- Font optimization
+- Responsive images
+- Mobile-first approach
+
+## Development Guidelines
+- Maintain consistent spacing patterns
+- Follow responsive design principles
+- Ensure accessibility compliance
+- Implement proper SEO practices
+- Keep components modular and reusable
